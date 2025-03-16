@@ -2,6 +2,13 @@
 
 A modern, responsive portfolio website built with Next.js 13, React, and Tailwind CSS. This portfolio showcases my professional experience, skills, and projects with a clean and intuitive user interface.
 
+🌍 Live Demo
+This project is hosted on Vercel.
+🔗 Live Site: https://aynurkozan.com
+
+<img width="1373" alt="image" src="https://github.com/user-attachments/assets/704dfc69-b861-4a91-b799-aec61b516e80" />
+
+
 ## 🚀 Features
 
 - **Modern UI/UX**: Clean and professional design with smooth animations
