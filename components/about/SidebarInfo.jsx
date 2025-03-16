@@ -31,7 +31,7 @@ const SidebarInfo = () => {
         </div>
 
         <a
-          href="/images/cv.pdf"
+          href="/images/Aynur-Kozan-Web-Resume.pdf"
           download
           className="inline-flex items-center mx-auto bg-gradient-to-r from-[#4b72d2] to-[#001e69] duration-200 transition ease-linear hover:bg-gradient-to-l px-8 py-3 text-lg text-white rounded-[35px] mt-6"
         >
