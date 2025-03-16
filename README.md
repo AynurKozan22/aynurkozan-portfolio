@@ -63,34 +63,6 @@ yarn dev
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 📁 Project Structure
-
-📦 aynurkozan-portfolio
-├── 📁 app
-│   ├── 📁 home
-│   ├── 📁 about
-│   ├── 📁 works
-│   ├── 📁 contact
-│   └── 📄 page.jsx
-├── 📁 components
-│   ├── 📁 header
-│   ├── 📁 footer
-│   ├── 📁 hero
-│   ├── 📁 about
-│   ├── 📁 works
-│   └── 📁 contact
-├── 📁 public
-│   ├── 📁 images
-│   └── 📁 icons
-├── 📁 styles
-│   ├── 📄 globals.css
-│   └── 📄 custom.css
-├── 📄 package.json
-├── 📄 tailwind.config.js
-├── 📄 README.md
-└── 📄 .gitignore
-
-
 ## 🔧 Configuration
 
 ### Email Configuration
