@@ -10,7 +10,7 @@ const CommonContact = ({ condition }) => {
 
   useEffect(() => {
     // Initialize EmailJS with the public key
-    emailjs.init(process.env.EMAILJS_USER_ID);
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
   }, []);
 
   const sendEmail = async (e) => {
@@ -22,14 +22,14 @@ const CommonContact = ({ condition }) => {
 
     try {
       console.log("Attempting to send email with:", {
-        serviceId: process.env.EMAILJS_SERVICE_ID,
-        templateId: process.env.EMAILJS_TEMPLATE_ID,
-        userId: process.env.EMAILJS_USER_ID ? "exists" : "missing",
+        serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        userId: process.env.NEXT_PUBLIC_EMAILJS_USER_ID ? "exists" : "missing",
       });
 
       const result = await emailjs.sendForm(
-        process.env.EMAILJS_SERVICE_ID,
-        process.env.EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current
       );
 
