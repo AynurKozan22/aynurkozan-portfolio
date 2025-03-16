@@ -65,18 +65,31 @@ yarn dev
 
 ## 📁 Project Structure
 
-\`\`\`
-├── app/ # Next.js 13 app directory
-├── components/ # React components
-│ ├── about/ # About section components
-│ ├── contact/ # Contact form components
-│ ├── Resume/ # Resume section components
-│ └── ... # Other components
-├── data/ # Data files for content
-├── public/ # Static assets
-├── styles/ # Global styles
-└── utilis/ # Utility functions
-\`\`\`
+📦 aynurkozan-portfolio
+├── 📁 app
+│   ├── 📁 home
+│   ├── 📁 about
+│   ├── 📁 works
+│   ├── 📁 contact
+│   └── 📄 page.jsx
+├── 📁 components
+│   ├── 📁 header
+│   ├── 📁 footer
+│   ├── 📁 hero
+│   ├── 📁 about
+│   ├── 📁 works
+│   └── 📁 contact
+├── 📁 public
+│   ├── 📁 images
+│   └── 📁 icons
+├── 📁 styles
+│   ├── 📄 globals.css
+│   └── 📄 custom.css
+├── 📄 package.json
+├── 📄 tailwind.config.js
+├── 📄 README.md
+└── 📄 .gitignore
+
 
 ## 🔧 Configuration
 
