@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +7,11 @@ import "react-toastify/dist/ReactToastify.css";
 const CommonContact = ({ condition }) => {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Initialize EmailJS with the public key
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -16,12 +21,19 @@ const CommonContact = ({ condition }) => {
     setIsSubmitting(true);
 
     try {
+      console.log("Attempting to send email with:", {
+        serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        userId: process.env.NEXT_PUBLIC_EMAILJS_USER_ID ? "exists" : "missing",
+      });
+
       const result = await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        form.current
       );
+
+      console.log("EmailJS Response:", result);
 
       if (result.status === 200) {
         toast.success("Message sent successfully!", {
